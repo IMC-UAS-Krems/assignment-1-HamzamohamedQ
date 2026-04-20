@@ -1,4 +1,4 @@
-# This module defines the StreamingPlatform class, which manages the overall state of the music streaming service.
+# This module defines the StreamingPlatform class which manages the overall state of the music streaming service
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple, Set
 from collections import defaultdict

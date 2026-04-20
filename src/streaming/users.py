@@ -1,6 +1,6 @@
 # This module defines the User class hierarchy, which represents different types of users (free, premium, family account) in the music streaming service.
 from datetime import date
-from typing import List, Set, TYPE_CHECKING, Optional
+from typing import List, Sequence, Set, TYPE_CHECKING, Optional
 
 if TYPE_CHECKING:
     from .sessions import ListeningSession
@@ -61,8 +61,8 @@ class FamilyAccountUser(PremiumUser):
         
         self.sub_users.append(sub_user)
 
-    def all_members(self) -> List[User]:
-        """Return all members including the main account and sub-users."""
+    def all_members(self) -> Sequence[User]:
+       
         return [self] + self.sub_users
 
 
